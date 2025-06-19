@@ -552,13 +552,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.command == "extract":
+        print("extract command:")
         wfs = Workflows()
+        print("Pre workflow init:")
         wfs.init_by_searching(args.tools)
+        print("Post workflow init:")
         # Add this to inspect the contents
         workflows_dict = wfs.export_workflows_to_dict()
         print("Exported workflows dict:")
         print(workflows_dict)  # You can also use pprint for better formatting
         shared.export_to_json(workflows_dict, args.all)
+        print("Exported workflows done:")
 
     elif args.command == "filter":
         wfs = Workflows()

@@ -554,10 +554,10 @@ if __name__ == "__main__":
     if args.command == "extract":
         print("extract")
         wfs = Workflows()
-        print(wf)
+        print(wfs)
         wfs.init_by_searching(args.tools)
         print("wf_post_init")
-        print(wf)
+        print(wfs)
         shared.export_to_json(wfs.export_workflows_to_dict(), args.all)
         print("wf_post_shared")
         print(shared.export_to_json)

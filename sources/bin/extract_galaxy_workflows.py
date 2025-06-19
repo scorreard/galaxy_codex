@@ -553,7 +553,7 @@ if __name__ == "__main__":
 
     if args.command == "extract":
         print("extract command:")
-        wfs = Workflows()
+        wfs = Workflows(test=args.test)
         print("Pre workflow init:")
         wfs.init_by_searching(args.tools)
         print("Post workflow init:")

@@ -554,7 +554,11 @@ if __name__ == "__main__":
     if args.command == "extract":
         wfs = Workflows()
         wfs.init_by_searching(args.tools)
-        shared.export_to_json(wfs.export_workflows_to_dict(), args.all)
+        # Add this to inspect the contents
+        workflows_dict = wfs.export_workflows_to_dict()
+        print("Exported workflows dict:")
+        print(workflows_dict)  # You can also use pprint for better formatting
+        shared.export_to_json(workflows_dict, args.all)
 
     elif args.command == "filter":
         wfs = Workflows()

@@ -552,7 +552,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.command == "extract":
-        wfs = Workflows(test=args.test)
+        wfs = Workflows()
         wfs.init_by_searching(args.tools)
         shared.export_to_json(wfs.export_workflows_to_dict(), args.all)
 

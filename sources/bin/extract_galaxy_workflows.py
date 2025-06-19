@@ -221,8 +221,8 @@ class Workflows:
 
     def init_by_searching(self, tool_fp: str) -> None:
         self.tools = shared.read_suite_per_tool_id(tool_fp)
-        self.add_workflows_from_workflowhub()
-        self.add_workflows_from_workflowhub("dev.")
+        #self.add_workflows_from_workflowhub()
+        #self.add_workflows_from_workflowhub("dev.")
         self.add_workflows_from_public_servers()
 
     def init_by_importing(self, wfs: dict) -> None:
@@ -280,8 +280,8 @@ class Workflows:
             if wf["published"] and wf["importable"] and not wf["deleted"] and not wf["hidden"]:
                 count += 1
                 # The following workflow (id=f65a2f2a19bea880) caused the request to crash, it was reported to the Galaxy team, in the meantime, we are skipping it
-                if wf["id"] == "f65a2f2a19bea880":
-                    continue
+                #if wf["id"] == "f65a2f2a19bea880":
+                #    continue
                 server_wf = shared.get_request_json(
                     f"{server}/api/workflows/{wf['id']}",
                     header,
@@ -296,11 +296,11 @@ class Workflows:
         Extract workflows from UseGalaxy servers
         """
         server_urls = [
-            "https://usegalaxy.fr",
-            "https://usegalaxy.cz",
+            #"https://usegalaxy.fr",
+            #"https://usegalaxy.cz",
             "https://usegalaxy.eu",
-            "https://usegalaxy.org",
-            "https://usegalaxy.org.au",
+            #"https://usegalaxy.org",
+            #"https://usegalaxy.org.au",
         ]
         if self.test:
             server_urls = server_urls[2:3]

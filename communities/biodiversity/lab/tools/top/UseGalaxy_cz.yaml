@@ -1,0 +1,40 @@
+install_repository_dependencies: true
+install_resolver_dependencies: true
+install_tool_dependencies: true
+tools:
+- name: dfast
+  owner: ufz
+  tool_panel_section_id: ''
+- name: fastk_fastk
+  owner: iuc
+  tool_panel_section_id: ''
+- name: fastk_histex
+  owner: iuc
+  tool_panel_section_id: ''
+- name: fastk_logex
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_arithmetic_kmers
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_count_kmers
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_filter_kmers
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_groups_kmers
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_histogram_kmers
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_print
+  owner: iuc
+  tool_panel_section_id: ''
+- name: meryl_trio_mode
+  owner: iuc
+  tool_panel_section_id: ''
+- name: prodigal
+  owner: iuc
+  tool_panel_section_id: ''

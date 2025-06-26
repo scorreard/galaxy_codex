@@ -1,14 +1,22 @@
 public:
 - name:biodiversity
 - biodiversity
+- Biodiversity
 - VGP_curated
 workflowhub:
 - Biodiversity
+- biodiversity
 - Annotation
+- annotation
 - ERGA
 - Genome assembly
+- genome assembly
 - ModGP
 - Earth-system
+- earth-system
 - Metagenomics
+- metagenomics
 - Ecology
+- ecology
 - Ecological
+- ecological

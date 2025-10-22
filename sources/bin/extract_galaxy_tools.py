@@ -21,6 +21,7 @@ from typing import (
 
 import numpy as np
 import pandas as pd
+import os
 import requests
 import shared
 import yaml
@@ -1026,6 +1027,33 @@ def export_missing_tools(missing_tools: dict, tool_dp: str) -> None:
         export_missing_tools_to_yaml(Path(top_d) / Path(server_fn), tools["top"])
 
 
+def create_tool_yml(data_source: str, yml_output_path: str) -> None:
+
+    with open(data_source, encoding="utf-8") as file:
+        data = json.load(file)
+
+    ### https://stackoverflow.com/a/12595082
+    ### https://stackoverflow.com/a/15340694
+    for tool in range(len(data)):
+        availability = {}
+        for field in data[tool]:
+            field_value = data[tool][field]
+            availability_match_string = "[Nn]umber of tools"
+            if re.search(availability_match_string, field):
+                instance_match_string = "[Uu]se[Gg]alaxy\.[a-z]{2}"
+                if re.search(instance_match_string, field):
+                    # field_name = re.search(instance_match_string, field).group(0)
+                    match = re.search(instance_match_string, field)
+                    if match:
+                        field_name = match.group(0)
+                        if field_value != 0:
+                            availability[field_name] = field_value
+        data[tool]["availability"] = availability
+
+    with open(yml_output_path, "w") as file:
+        yaml.dump(data, file, default_flow_style=False)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Extract Galaxy tools from GitHub repositories together with biotools and conda metadata"
@@ -1036,6 +1064,7 @@ if __name__ == "__main__":
     extract.add_argument("--api", "-a", required=True, help="GitHub access token")
     extract.add_argument("--all", "-o", required=True, help="Filepath to JSON with all extracted tools")
     extract.add_argument("--all-tsv", "-j", required=True, help="Filepath to TSV with all extracted tools")
+    extract.add_argument("--all-yml", "-y", required=True, help="Filepath to yml with all extracted tools")
     extract.add_argument(
         "--all-workflows",
         "-aw",
@@ -1171,6 +1200,8 @@ if __name__ == "__main__":
         tools = get_tools(repo_list, args.all_workflows, args.all_tutorials, edam_ontology)
         export_tools_to_json(tools, args.all)
         export_tools_to_tsv(tools, args.all_tsv, format_list_col=True)
+        create_tool_yml(data_source=args.all, yml_output_path=args.all_yml)
+#        os.symlink("./../../communities/all/resources/tools.yml", "./website/_data/tools.yml")
 
     elif args.command == "filter":
         with Path(args.all).open() as f:

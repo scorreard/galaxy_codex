@@ -45,6 +45,7 @@ else
                 extract \
                 --api $GITHUB_API_KEY \
                 --all-tsv 'communities/all/resources/tools.tsv' \
+                --all_yml 'communities/all/resources/tools.yml' \
                 --all 'communities/all/resources/tools.json' \
                 --all-workflows "communities/all/resources/workflows.json" \
                 --all-tutorials "communities/all/resources/tutorials.json" 

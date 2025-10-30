@@ -43,7 +43,7 @@ else
                                                 --yml "communities/$community/resources/curated_workflows.yml"
 
                                                 mkdir -p _data/communities/$community/
-                                                ln -s ../../communities/$community/resources/curated_workflows.yml _data/communities/$community/curated_workflows.yml
+                                                ln -sf ../../../communities/$community/resources/curated_workflows.yml _data/communities/$community/curated_workflows.yml
 
                                 fi;
                         fi;

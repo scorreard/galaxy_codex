@@ -32,7 +32,7 @@ else
                                                 --tags "communities/$community/metadata/tutorial_tags"
 
                                         mkdir -p _data/communities/$community/
-                                        ln -s ../../communities/$community/resources/tutorials.yml _data/communities/$community/tutorials.yml
+                                        ln -sf ../../../communities/$community/resources/tutorials.yml _data/communities/$community/tutorials.yml
 
                                         python sources/bin/create_interactive_table.py \
                                                 --input "communities/$community/resources/tutorials.tsv" \

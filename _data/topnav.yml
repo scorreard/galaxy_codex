@@ -9,4 +9,21 @@ subitems:
   url: /training
 - title: About
   url: /about
-    
+- title: Microbiology
+  subitems:
+  #In the pages folder
+  - title: Tools
+    url: /microgalaxy_tools
+  - title: Workflows
+    url: /microgalaxy_workflows
+  - title: Tutorials
+    url: /microgalaxy_tutorials
+- title: Biodiversity
+  subitems:
+  #In the pages folder
+  - title: Tools
+    url: /biodiversity_tools
+  - title: Workflows
+    url: /biodiversity_workflows
+  - title: Tutorials
+    url: /biodiversity_tutorials

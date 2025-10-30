@@ -1,4 +1,7 @@
 Link	Name	Source	Projects	Creators	Creation time	Update time	To keep	Deprecated
+https://workflowhub.eu/workflows/1219?version=1	clinicalmp-data-interpretation/main	WorkflowHub	Intergalactic Workflow Commission (IWC)	GalaxyP	2024-11-26	2024-12-06	True	False
+https://workflowhub.eu/workflows/1218?version=1	clinicalmp-verification/main	WorkflowHub	Intergalactic Workflow Commission (IWC)	Pratik Jagtap	2024-11-26	2024-12-06	True	False
+https://workflowhub.eu/workflows/1216?version=1	clinicalmp-database-generation/main	WorkflowHub	Intergalactic Workflow Commission (IWC)	Subina Mehta	2024-11-23	2024-12-06	True	False
 https://usegalaxy.eu/published/workflow?id=a2c46deea34d9d80	Halophiles workup of Comparative gene analysis	https://usegalaxy.eu		Anton Nekrutenko	2024-12-03	2024-12-05	True	False
 https://usegalaxy.eu/published/workflow?id=ca9d3233b0912765	pAllori Blood RNA	https://usegalaxy.eu		Engy Nasr, Paul Zierep	2023-07-02	2024-11-24	True	False
 https://usegalaxy.eu/published/workflow?id=cefc49c13ff73231	Metaproteomics workflow	https://usegalaxy.eu		Timothy Griffin, Pratik Jagtap, James Johnson, Clemens Blank, Subina Mehta	2024-11-21	2024-11-21	True	False

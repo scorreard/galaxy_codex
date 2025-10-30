@@ -1,5 +1,99 @@
 [
     {
+        "create_time": "2024-11-26",
+        "creators": [
+            "GalaxyP"
+        ],
+        "deprecated": false,
+        "doi": null,
+        "edam_operation": [],
+        "edam_topic": [],
+        "id": "1219",
+        "keep": true,
+        "latest_version": 1,
+        "license": "CC-BY-4.0",
+        "link": "https://workflowhub.eu/workflows/1219?version=1",
+        "name": "clinicalmp-data-interpretation/main",
+        "number_of_steps": 6,
+        "projects": [
+            "Intergalactic Workflow Commission (IWC)"
+        ],
+        "source": "WorkflowHub",
+        "tags": [],
+        "tools": [
+            "msstatstmt",
+            "Grep1",
+            "unipept"
+        ],
+        "update_time": "2024-12-06",
+        "versions": 1
+    },
+    {
+        "create_time": "2024-11-26",
+        "creators": [
+            "Pratik Jagtap"
+        ],
+        "deprecated": false,
+        "doi": null,
+        "edam_operation": [],
+        "edam_topic": [],
+        "id": "1218",
+        "keep": true,
+        "latest_version": 1,
+        "license": "CC-BY-4.0",
+        "link": "https://workflowhub.eu/workflows/1218?version=1",
+        "name": "clinicalmp-verification/main",
+        "number_of_steps": 19,
+        "projects": [
+            "Intergalactic Workflow Commission (IWC)"
+        ],
+        "source": "WorkflowHub",
+        "tags": [],
+        "tools": [
+            "Filter1",
+            "Grouping1",
+            "tp_cat",
+            "pepquery2",
+            "dbbuilder",
+            "query_tabular",
+            "collapse_dataset",
+            "Cut1",
+            "Remove beginning1",
+            "fasta_merge_files_and_filter_unique_sequences",
+            "uniprotxml_downloader"
+        ],
+        "update_time": "2024-12-06",
+        "versions": 1
+    },
+    {
+        "create_time": "2024-11-23",
+        "creators": [
+            "Subina Mehta"
+        ],
+        "deprecated": false,
+        "doi": null,
+        "edam_operation": [],
+        "edam_topic": [],
+        "id": "1216",
+        "keep": true,
+        "latest_version": 1,
+        "license": "CC-BY-4.0",
+        "link": "https://workflowhub.eu/workflows/1216?version=1",
+        "name": "clinicalmp-database-generation/main",
+        "number_of_steps": 3,
+        "projects": [
+            "Intergalactic Workflow Commission (IWC)"
+        ],
+        "source": "WorkflowHub",
+        "tags": [],
+        "tools": [
+            "metanovo",
+            "fasta_merge_files_and_filter_unique_sequences"
+        ],
+        "update_time": "2024-12-06",
+        "versions": 1
+    },
+    {
         "create_time": "2024-12-03",
         "creators": [
             "Anton Nekrutenko"

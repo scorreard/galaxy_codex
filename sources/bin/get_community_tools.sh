@@ -21,7 +21,7 @@ if [[ ! -z $1  && $1 == "test" ]]; then
                 --yml "communities/microgalaxy/resources/curated_tools.yml"
 
                 mkdir -p _data/communities/microgalaxy/
-                ln -s ../../communities/microgalaxy/resources/curated_tools.yml _data/communities/microgalaxy/curated_tools.yml
+                ln -sf ../../../communities/microgalaxy/resources/curated_tools.yml _data/communities/microgalaxy/curated_tools.yml
 
         python sources/bin/create_wordcloud.py \
                 --input  "communities/microgalaxy/resources/curated_tools.tsv" \
@@ -56,8 +56,8 @@ else
                                                 --w-biotools "communities/$community/resources/curated_tools_w_biotools.tsv" \
                                                 --yml "communities/$community/resources/curated_tools.yml"
 
-                                                mkdir -p _data/communities/$COMMUNITY/
-                                                ln -s ../../communities/$community/resources/curated_tools.yml _data/communities/$COMMUNITY/curated_tools.yml
+                                                mkdir -p _data/communities/$community/
+                                                ln -sf ../../../communities/$community/resources/curated_tools.yml _data/communities/$community/curated_tools.yml
 
 
                                         if [[ -e "communities/$community/resources/curated_tools.tsv" ]]; then

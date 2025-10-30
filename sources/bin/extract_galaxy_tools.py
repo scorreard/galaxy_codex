@@ -1027,7 +1027,7 @@ def export_missing_tools(missing_tools: dict, tool_dp: str) -> None:
         export_missing_tools_to_yaml(Path(top_d) / Path(server_fn), tools["top"])
 
 
-def create_tool_yml(data_source: str, yml_output_path: str) -> None:
+def export_tools_to_yml(data_source: str, yml_output_path: str) -> None:
 
     with open(data_source, encoding="utf-8") as file:
         data = json.load(file)
@@ -1154,6 +1154,7 @@ if __name__ == "__main__":
         "-s",
         help="Path to a TSV file with tool status - at least 3 columns: IDs of tool suites, Boolean with True to keep and False to exclude, Boolean with True if deprecated and False if not",
     )
+    curatetools.add_argument("--yml", "-y", required=True, help="Filepath to yml with community extracted tools")
 
     # Curate tools categories
     labpop = subparser.add_parser("popLabSection", help="Fill in Lab section tools")
@@ -1200,8 +1201,7 @@ if __name__ == "__main__":
         tools = get_tools(repo_list, args.all_workflows, args.all_tutorials, edam_ontology)
         export_tools_to_json(tools, args.all)
         export_tools_to_tsv(tools, args.all_tsv, format_list_col=True)
-        create_tool_yml(data_source=args.all, yml_output_path=args.all_yml)
-#        os.symlink("./../../communities/all/resources/tools.yml", "./website/_data/tools.yml")
+        export_tools_to_yml(data_source=args.all, yml_output_path=args.all_yml)
 
     elif args.command == "filter":
         with Path(args.all).open() as f:
@@ -1257,6 +1257,7 @@ if __name__ == "__main__":
                 format_list_col=True,
                 to_keep_columns=["Suite ID", "bio.tool name", "EDAM operations", "EDAM topics"],
             )
+            export_tools_to_yml(args.filtered, args.yml)
         else:
             # if there are no ts filtered tools
             print("No tools left after curation")

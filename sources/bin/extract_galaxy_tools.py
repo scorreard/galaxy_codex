@@ -820,6 +820,7 @@ def get_tools(
 
     tools = add_workflow_ids_to_tools(tools, all_workflows)
     tools = add_tutorial_ids_to_tools(tools, all_tutorials)
+    tools = filter_empty_tool_ids(tools)
 
     return tools
 
@@ -893,6 +894,16 @@ def add_tutorial_ids_to_tools(tools: List[Dict[str, Any]], all_tutorials: str) -
         tool["Related Tutorials"] = sorted(related)
 
     return tools
+
+
+def filter_empty_tool_ids(tools: List[Dict]) -> List[Dict]:
+    """
+    Filter out tools that have empty Tool IDs list.
+    
+    :param tools: List of tool dictionaries
+    :return: Filtered list of tools with non-empty Tool IDs
+    """
+    return [tool for tool in tools if tool.get("Tool IDs")]
 
 
 def extract_top_tools_per_category(

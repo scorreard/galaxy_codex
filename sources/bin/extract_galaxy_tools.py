@@ -899,7 +899,7 @@ def add_tutorial_ids_to_tools(tools: List[Dict[str, Any]], all_tutorials: str) -
 def filter_empty_tool_ids(tools: List[Dict]) -> List[Dict]:
     """
     Filter out tools that have empty Tool IDs list.
-    
+
     :param tools: List of tool dictionaries
     :return: Filtered list of tools with non-empty Tool IDs
     """

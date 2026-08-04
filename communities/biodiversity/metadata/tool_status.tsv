@@ -71,6 +71,7 @@ dada2	iuc	DADA2 wrappers	True	True
 das_tool	iuc	DAS Tool for genome resolved metagenomics	False	False
 dashing2	iuc	k-mer based tool for sketching and comparison of genomic sequences	True	False
 data_exploration	ecology	Explore data through multiple statistical tools	True	False
+deacon	iuc	filters DNA sequences in FASTA/Q files and streams using accelerated minimizer comparison		
 decontam	iuc	Removes decontamination features (ASVs/OTUs) using control samples	False	False
 deepsig	iuc	Predictor of signal peptides in proteins based on deep learning	False	False
 defense_finder	rplanel	DefenseFinder is a program to systematically detect known anti-phage systems.	False	False
